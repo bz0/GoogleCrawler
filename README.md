@@ -1,6 +1,9 @@
 # GoogleCrawler
 Googleのクローラ
 
+PHP7.1  
+MIT License  
+
 # サンプル
 
 ```
