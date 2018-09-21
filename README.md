@@ -4,8 +4,6 @@ Googleのクローラ
 # サンプル
 
 ```
-require_once(dirname(__DIR__) . '/vendor/autoload.php');
-
 use bz0\GoogleCrawler\Crawler\Google;
 
 $q   = "あああ";
