@@ -1,5 +1,5 @@
 # GoogleCrawler
-Googleのクローラ
+Google検索のクローラ
 
 PHP7.1  
 MIT License  
