@@ -7,12 +7,13 @@ MIT License
 # サンプル
 
 ```
-use bz0\GoogleCrawler\Crawler\Google;
+use bz0\GoogleCrawler\Client;
 
 $q   = "あああ";
 $page = 2;
-$api = new Google($q, $page);
-$res = $api->searchResult();
+
+$client = new Client();
+$res = $client->api('search')->scraper($q, $page);
 var_dump($res);
 ```
 
