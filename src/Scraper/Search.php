@@ -1,16 +1,19 @@
 <?php
-    namespace bz0\GoogleCrawler\Crawler;
+    namespace bz0\GoogleCrawler\Scraper;
+    use bz0\GoogleCrawler\Crawler\RequestInterface;
     use bz0\GoogleCrawler\Entity\GoogleSearch;
 
-    class GoogleScraper{
-        private $crawler;
-        public function __construct($crawler){
-            $this->crawler = $crawler;
+    class Search{
+        private $request;
+        public function __construct(RequestInterface $request){
+            $this->request = $request;
         }
 
-        public function search(){
+        public function scraper($q, $page){
+            $crawler = $this->request->request($q, $page);
+
             $result = [];
-            $this->crawler->filter('div.g')->each(function ($node) use(&$result) {
+            $crawler->filter('div.g')->each(function ($node) use(&$result) {
                 if(count($node->filter('h3.r a')) && 
                    count($node->filter('div.s cite'))){
                     $googleSearch = new GoogleSearch();
@@ -21,5 +24,9 @@
             });
 
             return $result;
+        }
+
+        public function accept($class){
+            return 'search' === strtolower($class);
         }
     }

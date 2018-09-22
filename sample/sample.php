@@ -4,9 +4,9 @@
 
     require_once(dirname(__DIR__) . '/vendor/autoload.php');
 
-    use bz0\GoogleCrawler\Crawler\Google;
+    use bz0\GoogleCrawler\Client;
 
     $q   = "あああ";
-    $api = new Google($q, 2);
-    $res = $api->searchResult();
+    $client = new Client();
+    $res = $client->api('search')->scraper($q, 1);
     var_dump($res);
