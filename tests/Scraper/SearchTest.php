@@ -9,8 +9,7 @@
             $q = "ああああ";
             $page = 2;
             $scraperResult = $search->scraper($q, $page);
-            var_dump($scraperResult);
-            $this->assertEquals(9, count($result));
+            $this->assertEquals(9, count($scraperResult));
         }
 
         public function testAccept_True(){
