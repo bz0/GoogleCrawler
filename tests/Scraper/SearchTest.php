@@ -9,23 +9,8 @@
             $q = "ああああ";
             $page = 2;
             $scraperResult = $search->scraper($q, $page);
-
-            $result  = [];
-            $url     = "https://www.google.co.jp/search?q=ああああ&start=20";
-            $client  = new Goutte\Client();
-            $crawler = $client->request('GET', $url);
-
-            $crawler->filter('div.g')->each(function ($node) use(&$result) {
-                if(count($node->filter('h3.r a')) && 
-                   count($node->filter('div.s cite'))){
-                    $googleSearch = new bz0\GoogleCrawler\Entity\GoogleSearch();
-                    $googleSearch->title = $node->filter('h3.r a')->text();
-                    $googleSearch->url   = $node->filter('div.s cite')->text();
-                    $result[] =  (array)$googleSearch;
-                }
-            });
-
-            $this->assertEquals($scraperResult, $result);
+            var_dump($scraperResult);
+            $this->assertEquals(9, count($result));
         }
 
         public function testAccept_True(){
