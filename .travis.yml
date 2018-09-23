@@ -2,8 +2,6 @@ language: php
 php:
   - '7.1'
 dist: precise
-services:
-  - mysql
 sudo: false
 cache:
   directories:
