@@ -1,6 +1,5 @@
 <?php
     namespace bz0\GoogleCrawler\Crawler;
-    use GuzzleHttp\Client as GuzzleClient;
     use Goutte\Client;
 
     class SearchRequest implements RequestInterface{
@@ -14,6 +13,8 @@
         private function setParametor($q, $page){
             $this->params['q'] = $q;
             $this->params['start'] = $page * 10;
+
+            return $this->params;
         }
 
         private function queryGenerator(){
