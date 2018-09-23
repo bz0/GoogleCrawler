@@ -1,7 +1,7 @@
 # GoogleCrawler
 Google検索結果のクローラ
 
-[![Coverage Status](https://coveralls.io/repos/github/bz0/GoogleCrawler/badge.svg?branch=master)](https://coveralls.io/github/bz0/GoogleCrawler?branch=master)
+[![Build Status](https://travis-ci.org/bz0/GoogleCrawler.svg?branch=master)](https://travis-ci.org/bz0/GoogleCrawler)
 [![Coverage Status](https://coveralls.io/repos/github/bz0/GoogleCrawler/badge.svg?branch=master)](https://coveralls.io/github/bz0/GoogleCrawler?branch=master)
 
 PHP7.1  
