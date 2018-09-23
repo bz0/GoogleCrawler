@@ -1,6 +1,13 @@
 language: php
 php:
   - '7.0'
+dist: precise
+services:
+  - mysql
+sudo: false
+cache:
+  directories:
+    - $HOME/.composer/cache
 before_script:
   - composer self-update
   - composer install
