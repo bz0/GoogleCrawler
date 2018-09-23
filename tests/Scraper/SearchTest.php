@@ -9,7 +9,7 @@
             $q = "ああああ";
             $page = 2;
             $scraperResult = $search->scraper($q, $page);
-            $this->assertEquals(9, count($scraperResult));
+            $this->assertGreaterThan(5, count($scraperResult));
         }
 
         public function testAccept_True(){

@@ -17,6 +17,6 @@
                 }
             }
 
-            throw new Exception('Api Not Found');
+            throw new \Exception('Api Not Found');
         }
     }
